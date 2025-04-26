@@ -82,11 +82,11 @@ class MusicPlayerDatabase:
 if __name__ == "__main__":
     db = MusicPlayerDatabase()
     db.clear_library()
-    music_id = db.add_music("Judas", "Lady Gaga", "abc")  # Get the ID of the added music
+    music_id = db.add_music("Judas", "Lady Gaga", "abc")
     print(db.view_library("Judas"))
     
     if music_id is not None:
-        db.update_music(music_id, "Bad Romance", "Lady Gaga", "xyz")  # Update using the actual ID
+        db.update_music(music_id, "Bad Romance", "Lady Gaga", "xyz")
         print(db.view_library("Bad Romance"))
-        db.delete_music(music_id)  # Delete using the actual ID
+        db.delete_music(music_id) 
         print(db.view_library())
